@@ -362,6 +362,20 @@ class EasyLoading {
     );
   }
 
+  static Future<void> showWidget(
+    Widget w, {
+    Duration duration,
+    EasyLoadingMaskType maskType,
+    bool dismissOnTap,
+  }) {
+    return _getInstance()._show(
+      status: '',
+      maskType: maskType,
+      dismissOnTap: dismissOnTap,
+      w: w,
+    );
+  }
+
   /// showToast [status] [duration] [toastPosition] [maskType]
   static Future<void> showToast(
     String status, {
